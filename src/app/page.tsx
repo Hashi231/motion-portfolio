@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Play, ArrowRight, Mail, LayoutGrid, User, Home as HomeIcon, Film, Video, Camera } from "lucide-react";
 import Image from "next/image";
 
+const basePath = process.env.NODE_ENV === "production" ? "/motion-portfolio" : "";
+
 export default function Home() {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
@@ -48,7 +50,7 @@ export default function Home() {
           className="flex items-center"
         >
           <Image 
-            src="/logo.png" 
+            src={`${basePath}/hx4zh-logo.png`} 
             alt="Brand Logo" 
             width={48} 
             height={48} 
@@ -180,7 +182,7 @@ export default function Home() {
         {/* Background Artwork with visible aesthetic opacity */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <Image
-            src="/about-bg.jpg"
+            src={`${basePath}/about-bg.jpg`}
             alt="Artwork & Design Background"
             fill
             className="object-cover object-center opacity-35"
@@ -300,7 +302,7 @@ export default function Home() {
         {/* Background Showcase Image with clear visibility */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <Image
-            src="/works-bg.jpg"
+            src={`${basePath}/works-bg.jpg`}
             alt="Works Showcase Background"
             fill
             className="object-cover object-center opacity-70 filter brightness-110"
