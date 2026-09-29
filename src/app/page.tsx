@@ -338,9 +338,9 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { id: "sbAEEPJKo6I", url: "https://youtu.be/sbAEEPJKo6I?si=zl2Nu4EluYp4XJFy", title: "Stinger #1", quality: "maxresdefault" },
-              { id: "3G-PsP7jLTY", url: "https://youtu.be/3G-PsP7jLTY?si=2Sm6bLfUc0f2TRpj", title: "Stinger #2", quality: "maxresdefault" },
-              { id: "EeoJUv4_AMs", url: "https://youtu.be/EeoJUv4_AMs?si=u-XQsgb7mzkU2OjD", title: "Stinger #3", quality: "hqdefault" },
+              { id: "sbAEEPJKo6I", url: "https://youtu.be/sbAEEPJKo6I?si=zl2Nu4EluYp4XJFy", title: "Wingsdings", quality: "maxresdefault" },
+              { id: "3G-PsP7jLTY", url: "https://youtu.be/3G-PsP7jLTY?si=2Sm6bLfUc0f2TRpj", title: "Quetzu Solscale", quality: "maxresdefault" },
+              { id: "EeoJUv4_AMs", url: "https://youtu.be/EeoJUv4_AMs?si=u-XQsgb7mzkU2OjD", title: "Ceru Foxhound", quality: "hqdefault" },
             ].map((item, i) => (
               <motion.a
                 key={i}
