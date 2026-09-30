@@ -101,7 +101,7 @@ export default function Home() {
             Hello, my name is
           </motion.div>
           
-          <h1 className="text-5xl sm:text-6xl md:text-[10rem] font-black uppercase leading-none tracking-tighter flex justify-center md:justify-start flex-wrap overflow-hidden my-2 md:my-4">
+          <h1 className="text-6xl sm:text-7xl md:text-[10rem] font-black uppercase leading-none tracking-tight md:tracking-tighter flex justify-center md:justify-start overflow-hidden my-2 md:my-4 w-full">
             {"HX4ZH".split("").map((char, index) => (
               <motion.span
                 key={index}
