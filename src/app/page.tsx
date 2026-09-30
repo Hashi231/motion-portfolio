@@ -40,26 +40,26 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full px-4 sm:px-6 md:px-20 py-4 sm:py-6 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 z-50">
+      <nav className="fixed top-0 w-full px-3 sm:px-6 md:px-20 py-4 sm:py-6 flex flex-row justify-between items-center z-50">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex items-center"
+          className="flex items-center shrink-0"
         >
           <Image 
             src="/hx4zh-logo.png" 
             alt="Brand Logo" 
-            width={48} 
-            height={48} 
-            className="rounded-full object-cover border border-white/20"
+            width={40} 
+            height={40} 
+            className="rounded-full object-cover border border-white/20 w-8 h-8 md:w-12 md:h-12"
           />
         </motion.div>
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-3 md:gap-8 text-[9px] sm:text-[10px] md:text-xs font-semibold uppercase tracking-[0.1em] md:tracking-[0.2em] bg-white/5 backdrop-blur-md border border-white/10 px-4 md:px-8 py-3 md:py-4 rounded-full shadow-2xl w-full max-w-fit"
+          className="flex flex-row justify-center gap-3 md:gap-8 text-[9px] sm:text-[10px] md:text-xs font-semibold uppercase tracking-[0.05em] md:tracking-[0.2em] bg-white/5 backdrop-blur-md border border-white/10 px-3 md:px-8 py-2.5 md:py-4 rounded-full shadow-2xl ml-2 sm:ml-0"
         >
           <a href="#" onClick={(e) => scrollToSection(e, "top")} className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
             <HomeIcon className="w-4 h-4" /> Home
