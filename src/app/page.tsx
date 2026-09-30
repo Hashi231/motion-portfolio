@@ -201,7 +201,7 @@ export default function Home() {
           <div className="mb-12 md:mb-16 text-center md:text-left">
             <p className="text-gray-500 font-mono tracking-widest uppercase text-sm mb-4">— About Me</p>
             <h2 className="text-4xl md:text-7xl font-bold tracking-tighter uppercase leading-none">
-              Behind The<br className="hidden sm:block"/>Craft
+              Behind The <br className="hidden sm:block"/>Craft
             </h2>
           </div>
 
@@ -321,7 +321,7 @@ export default function Home() {
         >
           <div>
             <p className="text-gray-500 font-mono tracking-widest uppercase text-sm mb-4">— Portfolio</p>
-            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter uppercase leading-none">Selected<br className="hidden sm:block"/>Works</h2>
+            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter uppercase leading-none">Selected <br className="hidden sm:block"/>Works</h2>
           </div>
           <p className="text-gray-400 max-w-sm text-sm md:text-base leading-relaxed">
             Motion graphics, transitions, and music videos crafted for bold brands and creators worldwide.
