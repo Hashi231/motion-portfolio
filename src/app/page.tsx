@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full px-6 md:px-20 py-6 flex justify-between items-center z-50">
+      <nav className="fixed top-0 w-full px-4 sm:px-6 md:px-20 py-4 sm:py-6 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 z-50">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,7 +59,7 @@ export default function Home() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex gap-8 text-xs font-semibold uppercase tracking-[0.2em] bg-white/5 backdrop-blur-md border border-white/10 px-8 py-4 rounded-full shadow-2xl"
+          className="flex flex-wrap justify-center gap-3 md:gap-8 text-[9px] sm:text-[10px] md:text-xs font-semibold uppercase tracking-[0.1em] md:tracking-[0.2em] bg-white/5 backdrop-blur-md border border-white/10 px-4 md:px-8 py-3 md:py-4 rounded-full shadow-2xl w-full max-w-fit"
         >
           <a href="#" onClick={(e) => scrollToSection(e, "top")} className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
             <HomeIcon className="w-4 h-4" /> Home
@@ -101,7 +101,7 @@ export default function Home() {
             Hello, my name is
           </motion.div>
           
-          <h1 className="text-6xl md:text-[10rem] font-black uppercase leading-none tracking-tighter flex overflow-hidden my-4">
+          <h1 className="text-5xl sm:text-6xl md:text-[10rem] font-black uppercase leading-none tracking-tighter flex overflow-hidden my-4">
             {"HX4ZH".split("").map((char, index) => (
               <motion.span
                 key={index}
@@ -123,15 +123,15 @@ export default function Home() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 1 }}
-            className="mt-12 max-w-2xl relative group cursor-default border-l-2 border-white/20 pl-6"
+            className="mt-8 md:mt-12 max-w-2xl relative group cursor-default border-l-2 border-white/20 pl-4 md:pl-6"
           >
             {/* Hover Glow on Border */}
             <div className="absolute left-[-2px] top-0 bottom-0 w-[2px] bg-white blur-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             
-            <h2 className="text-2xl md:text-4xl text-white font-medium tracking-tight mb-4 leading-snug">
-              Motion Graphic Designer <span className="text-gray-600 font-light">&</span><br/>Music Video Editor
+            <h2 className="text-xl sm:text-2xl md:text-4xl text-white font-medium tracking-tight mb-2 md:mb-4 leading-snug">
+              Motion Graphic Designer <span className="text-gray-600 font-light">&</span><br className="hidden sm:block"/> Music Video Editor
             </h2>
-            <p className="text-base md:text-lg text-gray-400 font-light leading-relaxed max-w-xl">
+            <p className="text-sm md:text-lg text-gray-400 font-light leading-relaxed max-w-xl">
               Crafting sharp, high-impact motion design for bold brands and creators worldwide. Built on detail, driven by results.
             </p>
           </motion.div>
@@ -176,7 +176,7 @@ export default function Home() {
       </section>
 
       {/* About Me Section */}
-      <section id="about" className="py-32 px-6 md:px-20 bg-black border-t border-white/10 relative overflow-hidden">
+      <section id="about" className="py-20 md:py-32 px-4 sm:px-6 md:px-20 bg-black border-t border-white/10 relative overflow-hidden">
         {/* Background Artwork with visible aesthetic opacity */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <Image
@@ -296,7 +296,7 @@ export default function Home() {
       </section>
 
       {/* Selected Works */}
-      <section id="work" className="py-32 px-6 md:px-20 bg-black relative overflow-hidden border-t border-white/10">
+      <section id="work" className="py-20 md:py-32 px-4 sm:px-6 md:px-20 bg-black relative overflow-hidden border-t border-white/10">
         {/* Background Showcase Image with clear visibility */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <Image
@@ -484,18 +484,18 @@ export default function Home() {
     </section>
 
       {/* Footer / Contact */}
-      <section id="contact" className="py-32 px-6 md:px-20 bg-black min-h-[70vh] flex flex-col justify-between">
+      <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 md:px-20 bg-black min-h-[70vh] flex flex-col justify-between">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-5xl md:text-9xl font-black uppercase tracking-tighter mb-8 text-white hover:text-gray-300 transition-colors cursor-pointer w-fit">
+          <h2 className="text-4xl sm:text-5xl md:text-9xl font-black uppercase tracking-tighter mb-8 text-white hover:text-gray-300 transition-colors cursor-pointer w-fit">
             CONTACT ME
           </h2>
-          <a href="mailto:hxzhmv@gmail.com" className="text-xl md:text-3xl text-gray-400 hover:text-white transition-colors flex items-center gap-4 w-fit">
-            <Mail className="w-8 h-8" />
+          <a href="mailto:hxzhmv@gmail.com" className="text-lg sm:text-xl md:text-3xl text-gray-400 hover:text-white transition-colors flex items-center gap-2 md:gap-4 w-fit">
+            <Mail className="w-6 h-6 md:w-8 md:h-8" />
             hxzhmv@gmail.com
           </a>
         </motion.div>
