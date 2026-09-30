@@ -90,18 +90,18 @@ export default function Home() {
         </div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-900 via-black to-black opacity-50 z-0 pointer-events-none"></div>
 
-        {/* Content Wrapper for perfect left alignment */}
-        <div className="z-10 relative flex flex-col items-start w-full">
+        {/* Content Wrapper for perfect left alignment on desktop, centered on mobile */}
+        <div className="z-10 relative flex flex-col items-center md:items-start text-center md:text-left w-full mt-12 md:mt-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-gray-400 font-mono tracking-widest uppercase mb-6"
+            className="text-gray-400 font-mono tracking-widest uppercase mb-4 md:mb-6 text-xs sm:text-sm"
           >
             Hello, my name is
           </motion.div>
           
-          <h1 className="text-5xl sm:text-6xl md:text-[10rem] font-black uppercase leading-none tracking-tighter flex overflow-hidden my-4">
+          <h1 className="text-5xl sm:text-6xl md:text-[10rem] font-black uppercase leading-none tracking-tighter flex justify-center md:justify-start flex-wrap overflow-hidden my-2 md:my-4">
             {"HX4ZH".split("").map((char, index) => (
               <motion.span
                 key={index}
@@ -123,15 +123,16 @@ export default function Home() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 1 }}
-            className="mt-8 md:mt-12 max-w-2xl relative group cursor-default border-l-2 border-white/20 pl-4 md:pl-6"
+            className="mt-6 md:mt-12 max-w-2xl relative group cursor-default border-t-2 md:border-t-0 md:border-l-2 border-white/20 pt-4 md:pt-0 md:pl-6 flex flex-col items-center md:items-start"
           >
             {/* Hover Glow on Border */}
-            <div className="absolute left-[-2px] top-0 bottom-0 w-[2px] bg-white blur-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute left-[-2px] top-0 bottom-0 w-[2px] bg-white blur-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden md:block"></div>
+            <div className="absolute top-[-2px] left-0 right-0 h-[2px] bg-white blur-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 md:hidden"></div>
             
-            <h2 className="text-xl sm:text-2xl md:text-4xl text-white font-medium tracking-tight mb-2 md:mb-4 leading-snug">
+            <h2 className="text-xl sm:text-2xl md:text-4xl text-white font-medium tracking-tight mb-3 md:mb-4 leading-snug">
               Motion Graphic Designer <span className="text-gray-600 font-light">&</span><br className="hidden sm:block"/> Music Video Editor
             </h2>
-            <p className="text-sm md:text-lg text-gray-400 font-light leading-relaxed max-w-xl">
+            <p className="text-sm md:text-lg text-gray-400 font-light leading-relaxed max-w-xl px-4 md:px-0">
               Crafting sharp, high-impact motion design for bold brands and creators worldwide. Built on detail, driven by results.
             </p>
           </motion.div>
@@ -197,10 +198,10 @@ export default function Home() {
           className="w-full relative z-10"
         >
           {/* Section Header */}
-          <div className="mb-16">
+          <div className="mb-12 md:mb-16 text-center md:text-left">
             <p className="text-gray-500 font-mono tracking-widest uppercase text-sm mb-4">— About Me</p>
             <h2 className="text-4xl md:text-7xl font-bold tracking-tighter uppercase leading-none">
-              Behind The<br />Craft
+              Behind The<br className="hidden sm:block"/>Craft
             </h2>
           </div>
 
@@ -316,13 +317,13 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6"
+          className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 md:mb-20 gap-4 md:gap-6 text-center md:text-left"
         >
           <div>
             <p className="text-gray-500 font-mono tracking-widest uppercase text-sm mb-4">— Portfolio</p>
-            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter uppercase leading-none">Selected<br/>Works</h2>
+            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter uppercase leading-none">Selected<br className="hidden sm:block"/>Works</h2>
           </div>
-          <p className="text-gray-400 max-w-sm text-base leading-relaxed">
+          <p className="text-gray-400 max-w-sm text-sm md:text-base leading-relaxed">
             Motion graphics, transitions, and music videos crafted for bold brands and creators worldwide.
           </p>
         </motion.div>
@@ -484,28 +485,29 @@ export default function Home() {
     </section>
 
       {/* Footer / Contact */}
-      <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 md:px-20 bg-black min-h-[70vh] flex flex-col justify-between">
+      <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 md:px-20 bg-black min-h-[70vh] flex flex-col justify-between items-center md:items-start text-center md:text-left">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
+          className="flex flex-col items-center md:items-start"
         >
           <h2 className="text-4xl sm:text-5xl md:text-9xl font-black uppercase tracking-tighter mb-8 text-white hover:text-gray-300 transition-colors cursor-pointer w-fit">
             CONTACT ME
           </h2>
-          <a href="mailto:hxzhmv@gmail.com" className="text-lg sm:text-xl md:text-3xl text-gray-400 hover:text-white transition-colors flex items-center gap-2 md:gap-4 w-fit">
+          <a href="mailto:hxzhmv@gmail.com" className="text-lg sm:text-xl md:text-3xl text-gray-400 hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2 md:gap-4 w-fit">
             <Mail className="w-6 h-6 md:w-8 md:h-8" />
             hxzhmv@gmail.com
           </a>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mt-20 border-t border-white/10 pt-8">
-          <div>
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-8 mt-20 border-t border-white/10 pt-8 w-full">
+          <div className="text-center md:text-left">
             <p className="text-gray-500 text-sm">© {new Date().getFullYear()} hx4zh.</p>
             <p className="text-gray-500 text-sm">All rights reserved.</p>
           </div>
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap justify-center md:justify-end items-center gap-3">
             <a 
               href="https://x.com/hx4zh_" 
               target="_blank" 
