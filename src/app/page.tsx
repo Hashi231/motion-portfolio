@@ -78,7 +78,19 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="h-screen flex flex-col justify-center px-6 md:px-20 relative overflow-hidden">
-        {/* Background Gradients & Moving Text */}
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          <Image
+            src="/hero-bg.jpg"
+            alt="Hero Background"
+            fill
+            className="object-cover object-center opacity-25"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-black/50 to-black opacity-80" />
+        </div>
+
+        {/* Moving Text */}
         <div className="absolute inset-0 flex flex-col justify-center pointer-events-none overflow-hidden z-0 select-none opacity-5">
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
@@ -88,7 +100,6 @@ export default function Home() {
             HX4ZH HX4ZH HX4ZH HX4ZH HX4ZH HX4ZH 
           </motion.div>
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-900 via-black to-black opacity-50 z-0 pointer-events-none"></div>
 
         {/* Content Wrapper for perfect left alignment on desktop, centered on mobile */}
         <div className="z-10 relative flex flex-col items-center md:items-start text-center md:text-left w-full mt-12 md:mt-0">
